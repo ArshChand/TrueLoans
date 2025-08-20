@@ -16,6 +16,7 @@ const Navbar = () => {
           <Link to="/" className="hover:text-[#005A9C] transition duration-300">Home</Link>
           <Link to="/about" className="hover:text-[#005A9C] transition duration-300">About Us</Link>
           <Link to="/services" className="hover:text-[#005A9C] transition duration-300">Loan Services</Link>
+          <Link to="/knowledge-center" className="hover:text-[#005A9C] transition duration-300">Knowledge Center</Link>
           <Link to="/contact" className="hover:text-[#005A9C] transition duration-300">Contact Us</Link> {/* <-- Add this Link */}
         </div>
       </div>

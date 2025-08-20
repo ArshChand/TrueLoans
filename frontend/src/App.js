@@ -4,7 +4,9 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
-import Contact from './components/Contact'; // <-- 1. Import Contact
+import Contact from './components/Contact';
+import KnowledgeCenter from './components/KnowledgeCenter';
+import BlogPost from './components/BlogPost';
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} /> {/* <-- 2. Add the Route */}
+        <Route path="/contact" element={<Contact />} /> 
+        <Route path="/knowledge-center" element={<KnowledgeCenter />} />
+        <Route path="/knowledge-center/:slug" element={<BlogPost />} />
       </Routes>
     </Router>
   );

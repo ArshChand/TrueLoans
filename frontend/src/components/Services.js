@@ -1,13 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// Updated services array
 const services = [
   { name: "Home Loan", description: "Secure the keys to your dream home with the best possible mortgage rates from our network of banks." },
   { name: "Loan Against Property", description: "Leverage the value of your existing property for your personal or business financial needs." },
   { name: "Personal Loan", description: "Flexible financing for any personal goal, from weddings and travel to unexpected expenses." },
   { name: "Business Loan", description: "Fuel your company's expansion, purchase inventory, or manage operations with tailored capital." },
-  { name: "MSME Loan", description: "Specialized funding solutions designed to empower Micro, Small, and Medium Enterprises." },
+  { name: "MSME Loan", description: "Specialized funding solutions to empower Micro, Small, and Medium Enterprises." },
   { name: "Working Capital", description: "Ensure your day-to-day business operations run smoothly with accessible working capital loans." },
 ];
 
@@ -25,9 +24,9 @@ const Services = () => {
               key={service.name} 
               className="bg-white p-8 rounded-lg shadow-lg text-center"
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }} // <-- 1. Replaced whileInView with animate
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
+              // <-- 2. Removed the viewport prop, it's not needed with animate
             >
               <h3 className="text-2xl font-bold text-[#005A9C] mb-4">{service.name}</h3>
               <p className="text-gray-700">{service.description}</p>
